@@ -24,11 +24,11 @@ foreach ($User in $ADUsers) #loop that run the entire file you selected
 {
 		
 	$Username 	= $User.username
-	$Password 	= $User.password #her brukes et fast passord til alle
+	$Password 	= $User.password
 	$Firstname 	= $User.firstname
 	$Lastname 	= $User.lastname
 	$OU 		= $User.ou # reference to the org unit the users should be added to
-    $email      = $User.email #email adresse
+    $email      = $User.email
     $jobtitle   = $User.jobtitle
 
 	if (Get-ADUser -F {SamAccountName -eq $Username})
